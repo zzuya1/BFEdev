@@ -33,7 +33,11 @@ function largestDiff(arr) {
 ```
 # analysis #
 + First,we need to pick any two number, so if the length of arr is less than 2, just return 0.
-+ We define variable max that reprsent the maximum value of arr. At the beginning, we set it equel to -Infinity.
-+ We create variable min that reprsent the minimum value of arr. At the beginning, we set it equel to Infinity.
-+ The next step, iterator over the arr by using forEach method 
++ We define variable `max` that reprsent the maximum value of arr. At the beginning, we set it equel to -Infinity.
++ We create variable `min` that reprsent the minimum value of arr. At the beginning, we set it equel to Infinity.
++ The next step, iterator over the `arr` by using `forEach` method.
++ Check whether the current element is greater than the variable `max`. If so, assign the current element to `max`.
++ Next,check whether the current element is less than the variable `min`. If so, assign the current element to `min`.
++ After the `forEach` loop , we can get the maximum value and minimum value of arr, they are variable `max` and `min`
++ Finally, we return `Math.abs(max - min)` directly.
 
