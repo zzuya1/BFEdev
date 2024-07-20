@@ -27,6 +27,6 @@ detectType(new Map()) // '[object Map]'
 detectType([]) // '[object Array]'
 detectType(null) // '[object Null]'
 ```
-+ This is not the format we expected, so we use the slice(8, -1) method to trim the string, which removes '\[object ' at the beginning and '\]' at the end.
++ This is not the format we expected, so we use the `.slice(8, -1)` method to trim the string, which removes '\[object ' at the beginning and '\]' at the end.
 + Next, convert the string to lowercase form by using `.toLowerCase()`
 + Finally,we have obtained the correct format, just return the code above
