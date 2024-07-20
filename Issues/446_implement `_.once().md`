@@ -1,0 +1,39 @@
+# issue #
+_.once(func) is used to force a function to be called only once, later calls only returns the result of first call.
+Can you implement your own once()?
+```
+function func(num) {
+  return num
+}
+const onced = once(func)
+onced(1) 
+// 1, func called with 1
+onced(2)
+// 1, even 2 is passed, previous result is returned 
+```
+# answer #
+```
+/**
+ * @param {Function} func
+ * @return {Function}
+ */
+function once(func) {
+  // your code here
+  let isCall = false,
+      result = null;
+
+  return function(...args){
+    if(!isCall){
+      result = func.call(this,...args)
+      isCall = true
+    }
+    return result
+  }
+}
+```
+# analysis #
++ We define a variable `isCall`, it's value repersent whether the function has been called before. At the beginning, we assign false to `isCall`
+
+
+
+
