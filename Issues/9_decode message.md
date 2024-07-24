@@ -1,10 +1,8 @@
 # issue #
-+ Your are given a 2-D array of characters. There is a hidden message in it.
-`
-I B C A L K A      
-D R F C A E A      
-G H O E L A D     
-`
++ Your are given a 2-D array of characters. There is a hidden message in it.    
+`I B C A L K A`   
+`D R F C A E A`    
+`G H O E L A D`     
 + The way to collect the message is as follows
   + start at top left
   + move diagonally down right
