@@ -51,3 +51,8 @@ function memo(func, resolver) {
 ```
 # analysis #
 + First create a map named 'cache' which represents the storage of the value returned by the func called  before.
++ Return a closure function ,and pass argument in this function
++ Beacuse the memo function accept an extra resolver parameter, which is used to generate the cache key, default it could be just `Array.from(arguments).join('_')`. If the resolver is exist, invoking the given resolver handle the args，otherwise we use the default resolver to handle args. Assign the result of handle to the cacheKey
++ Next ,we check whether the cacheKey is already in the cache，if it exists,  just return the value that we have already stored in the cache by using the `cache.get(cacheKey)`
++ If it does not exist， we should calculate the cacheValue by invoking `func.call(this,...args)`. Then, we put the `cacheKey` and `cacheValue` into the cache by using `set()` method
++ Finally, just return the value we calculated, and this question is over
