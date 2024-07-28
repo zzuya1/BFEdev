@@ -14,6 +14,28 @@
   + if no characters could be collected, return empty string
 
 # answer #
+```
+function decode(message) {
+  
+  let row = 0,
+      col = 0,
+      cols = message[0]?.length
+  let result = '',
+      dir = 1
 
+  while(col < cols){
+    result += message[row][col]
+    if(!message[row+dir]){
+      dir *= -1
+    }
+    row += dir
+    col += 1
+  }
+
+  return result
+}
+
+
+```
 
 # analysis #
