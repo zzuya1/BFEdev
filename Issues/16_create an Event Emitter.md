@@ -50,3 +50,10 @@ class EventEmitter {
 }
 ```
 # analysis #
++ In the EventEmitter, we will create a `constructor()` function , and assign an empty object to `this.subs`. The subs will store all our subscribe informtions
++ In the subscribe function ,if the `eventName` corrsponding map is not exist ,we assign a new map to it
++ for the passed callback, we assign `Symbol` to the key, and put the `key` and `callback` into the map `this.subs[eventName]`
++ next ,we will return an object that has the `release` property, the release is an arrow function ,we can delete the subscribe informtion from `this.subs[eventName]` by passing the key
++ for the function `emit`, we will invoking all the callback function corrsponding eventName.
++ So use `this.subs[eventName].values()` to get the callback iterator and iterate over the array by using for of loop
++ Then, invoke the callback. 
