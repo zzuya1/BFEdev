@@ -82,3 +82,13 @@ function render(myElement) {
 }
 ```
 # analysis #
++ we should change the structure of object according to the structure of `React.createElement() `
++ The first element is the `type`. The second is the `props` object, and it has data attributes and children elements 
++ Then we have obtained the data structure required by the render function. And we can get the render function from question 113
++ In the render function , we check whether the parameter passed in is a string , if so ,we create a text node and return it
++ If it is not, get the `type`, `props:{children,...attrs}` object from the `json`
++ Based on the type ,create the top level node element
++ Using `Object.entries`, we iterate over the other attributes, assign the value to the dom that we created
++ Check if the type of children elements is array , if not , convert to an array
++ Iterate over the children elements array,recursively invoking the `render()` function to append the children into the real DOM
++ Finally ,return the top node
