@@ -41,4 +41,10 @@ function pipe(funcs) {
 	 }
 }
 ```
-# analysis #
+# analysis # 
++ look at the example, we should return a function, and pass in the argument which is the unknow number `x`
++ By using `reduce()` to iterate over the parameters of passed-in `pipe()` which is called `funcs`
++ The `reduce()` method will accept a callback function as an accumulator, it will accumulate the elements of `funcs` from right to left
++ `result` is the return value of last callback function,func is the handler element currently being processed
++ the second parameter of `reduce()` is the initial value of the accumulator
++ finally , return the accumulated value 
